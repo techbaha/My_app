@@ -16,7 +16,10 @@ def execute(filters=None):
 		total_loans=0
 		total_repayments=0
 		interest=0
-		loans=frappe.db.get_list("Bank Loan",filters={"bank_name":b["name"]})
+		if "from_date" in filters.keys() and "to_date" in filters.keys():
+			loans=frappe.db.get_list("Bank Loan",filters=[["bank_name","in",[b["name"]]],["posting_date","between",[filters["from_date"],filters["to_date"]]]])
+		else:
+			loans=frappe.db.get_list("Bank Loan",filters={"bank_name":b["name"]})
 		for l in loans:
 			loan=frappe.get_doc("Bank Loan",l["name"])
 			total_loans+=loan.loan_amount
