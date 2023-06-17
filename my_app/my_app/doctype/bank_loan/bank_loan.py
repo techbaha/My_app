@@ -60,7 +60,7 @@ def check_loans():
 	for l in loans:
 		loan=frappe.get_doc("Bank Loan",l["name"])
 		for s in loan.schedule:
-			if s.payment_date==today and not s.journal_entry :
+			if s.payment_date<=today and not s.journal_entry :
 				if loan.auto_repayment :
 					entry=frappe.new_doc("Journal Entry")
 					entry.posting_date=getdate()
@@ -81,8 +81,8 @@ def check_loans():
 					
 					if s.name==loan.schedule[-1].name:
 						loan.status="Paid"
-					loan.save()
-					break
+		loan.save()
+					
 					
 
 
