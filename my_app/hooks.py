@@ -10,7 +10,7 @@ app_email = "baha@test.com"
 app_license = "MIT"
 
 
-fixtures = ["Custom Field"]
+fixtures = ["Custom Field","Workspace"]
 
 
 

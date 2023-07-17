@@ -1,0 +1,31 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-07-17 05:56:11.910419",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "test",
+ "links": [],
+ "modified": "2023-07-17 05:57:36.636208",
+ "modified_by": "Administrator",
+ "module": "test",
+ "name": "test",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 1,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "loan",
+   "link_to": "Bank Loan",
+   "type": "DocType"
+  }
+ ]
+}
